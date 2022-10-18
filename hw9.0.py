@@ -11,7 +11,7 @@ class VKClient:
     BASE_URL: str = "https://api.vk.com/method/"
     URL_AUTH = "https://oauth.vk.com/authorize?client_id=51442805&redirect_uri=http://example.com/callback&scope=12&display=mobile"
     URL_REDIRECT = "https://oauth.vk.com/blank.html"
-    METHOD_GET = "photos.get"
+    METHOD_GET = "photos.getAll"
     PROTOCOL_VERSION: str = "5.131"
     
 
@@ -33,13 +33,14 @@ class VKClient:
         }
 
         response = requests.get(url, params=params)
-        with open(r'final_file.json', 'w') as file_write:
-            json.dump(response.json(), file_write)
+
+        # with open(r'final_file.jpg', 'wb') as file_write:
+        #     file_write.write(response)
                    
         return response.json()
 
 
 client = VKClient(TOKEN, "9214619")
 result = client.get_photos()
-# print(result)
+print(result)
 
