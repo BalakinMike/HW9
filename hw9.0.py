@@ -5,7 +5,7 @@ from urllib.parse import urlencode
 
 
 APP_ID = 51442805
-TOKEN = 'vk1.a.Bv85NseNvhbO1LmqMjyWHBNB-OL4tCYDOdjHhvvtTAQ-5rVEMThWpndE-wF2xTEhI6VE_-wNOJRtGwkIT8jbVb6uisDut3Iiilj-x2BqnbfitGoauAv-jtMvB2gyXbu-Bw3iQGCt7Gvq95aGSKeSMnCC-jNcdF3ZPqc_h-RPsxUw3DvMy5Qodp_6_Pu72XKEklSVuuHXhoLggaeqxnh_Gw'
+TOKEN = 'vk1.a.tjZo-9Rkw2awIfHdYSn5cZpJ52mBN7y1zDb3vargXps8SWHjEMkVK7hYW-Fvyc2SvUkz5TlAHK6V37V6uW78bNEJfo5pCc3tM95dzrFQnkf4u0-JBmmQOWCFsdLkZ0S0hGKAqm7XQh82c3zj6CkUTU6O2h-MutW_TIpCMXCtZ39IbiK9PHWmex_yAshMOBu9'
 
 class VKClient:
     BASE_URL: str = "https://api.vk.com/method/"
@@ -28,7 +28,7 @@ class VKClient:
         params = {
             "access_token": self.token,
             "v": self.PROTOCOL_VERSION,
-            "album_id": "wall",
+            "album_id": "wall"
             
         }
 
